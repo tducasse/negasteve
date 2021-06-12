@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/coll2.wav-b6c9a5fa081d5333836b9a76d68a9bf3.sample"
+path="res://.import/switch.wav-d9130657ed64ccb39895627264182f54.sample"
 
 [deps]
 
-source_file="res://coll2.wav"
-dest_files=[ "res://.import/coll2.wav-b6c9a5fa081d5333836b9a76d68a9bf3.sample" ]
+source_file="res://switch.wav"
+dest_files=[ "res://.import/switch.wav-d9130657ed64ccb39895627264182f54.sample" ]
 
 [params]
 

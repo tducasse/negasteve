@@ -1,13 +1,21 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Spawner.gd" type="Script" id=1]
 [ext_resource path="res://Game.gd" type="Script" id=2]
 [ext_resource path="res://Steve.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Mont.tres" type="DynamicFont" id=4]
-[ext_resource path="res://swish.wav" type="AudioStream" id=5]
+[ext_resource path="res://switch.wav" type="AudioStream" id=5]
+[ext_resource path="res://death.wav" type="AudioStream" id=6]
+[ext_resource path="res://background.png" type="Texture" id=7]
+[ext_resource path="res://heart.png" type="Texture" id=8]
+[ext_resource path="res://hurt.wav" type="AudioStream" id=9]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 2 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 960, 328 )
+texture = ExtResource( 7 )
 
 [node name="Timer" type="Timer" parent="."]
 
@@ -24,7 +32,8 @@ position = Vector2( 50, 168 )
 position = Vector2( 50, 360 )
 
 [node name="FilterTop" type="ColorRect" parent="."]
-margin_right = 1280.0
+margin_left = -1.18921
+margin_right = 1278.81
 margin_bottom = 360.0
 color = Color( 0, 0, 0, 0.784314 )
 __meta__ = {
@@ -42,26 +51,59 @@ __meta__ = {
 
 [node name="Score" type="Label" parent="."]
 margin_left = 23.0
-margin_top = 18.0
-margin_right = 63.0
-margin_bottom = 32.0
+margin_top = 21.0
+margin_right = 288.0
+margin_bottom = 65.0
 custom_fonts/font = ExtResource( 4 )
+text = "SCORE: 128"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Level" type="Label" parent="."]
 margin_left = 12.6134
-margin_top = 693.74
-margin_right = 52.6134
-margin_bottom = 707.74
+margin_top = 660.74
+margin_right = 193.613
+margin_bottom = 704.74
 custom_fonts/font = ExtResource( 4 )
+text = "LEVEL 1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Switch" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="Lives" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 1163.57
+margin_top = 41.2725
+margin_right = 1277.57
+margin_bottom = 81.2725
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="heart" type="Sprite" parent="Lives"]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 8 )
+
+[node name="heart2" type="Sprite" parent="Lives"]
+position = Vector2( 45, 0 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 8 )
+
+[node name="heart3" type="Sprite" parent="Lives"]
+position = Vector2( 90, 0 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 8 )
+
+[node name="Hurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_Timer_timeout"]

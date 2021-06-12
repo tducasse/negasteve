@@ -5,8 +5,9 @@ var color = Color.black
 onready var Wall = $Wall
 onready var CollisionShapeItem = $ObstacleArea/CollisionShape2D
 
+
 var min_x = 20
-var max_x = 50
+var max_x = 120
 var min_y = 50
 var max_y = 530
 

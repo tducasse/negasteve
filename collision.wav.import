@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/coll3.wav-3e4561a265b06c6c8b4f9a9a35b0c396.sample"
+path="res://.import/collision.wav-fa03a5d956d12ab717d1ce8181b1bf82.sample"
 
 [deps]
 
-source_file="res://coll3.wav"
-dest_files=[ "res://.import/coll3.wav-3e4561a265b06c6c8b4f9a9a35b0c396.sample" ]
+source_file="res://collision.wav"
+dest_files=[ "res://.import/collision.wav-fa03a5d956d12ab717d1ce8181b1bf82.sample" ]
 
 [params]
 

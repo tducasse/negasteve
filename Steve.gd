@@ -3,7 +3,8 @@ extends Node2D
 
 onready var Black = $Black
 onready var White = $White
-onready var Death = $Death
+onready var Collision = $Collision
+
 
 var color = Color.black
 var enabled = false
@@ -25,10 +26,7 @@ func init(c, e):
 		
 		
 func play_collision():
-	var sound = randi() % 4 + 1
-	var sound_node = get_node("Coll"+str(sound))
-	sound_node.play()
-	
+	Collision.play()
 
 
 func _on_Area2D_area_entered(area):
@@ -40,5 +38,4 @@ func _on_Area2D_area_entered(area):
 		play_collision()
 		emit_signal("add_score")
 	else:
-		Death.play()
 		emit_signal("game_over")

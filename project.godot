@@ -11,8 +11,11 @@ config_version=4
 [application]
 
 config/name="negasteve"
-run/main_scene="res://Game.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Menu.tscn"
+
+[autoload]
+
+Global="*res://Global.gd"
 
 [display]
 
