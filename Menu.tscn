@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Mont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Menu.gd" type="Script" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Insanicbc.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Ilya_-_1985.ogg" type="AudioStream" id=5]
 [ext_resource path="res://blakeht_-_Amazon.ogg" type="AudioStream" id=6]
+
+[sub_resource type="Theme" id=1]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -69,19 +71,33 @@ __meta__ = {
 }
 
 [node name="Credits" type="Button" parent="."]
-margin_left = 1200.0
-margin_top = 680.0
-margin_right = 1257.0
-margin_bottom = 700.0
+margin_left = 39.0
+margin_top = 656.0
+margin_right = 96.0
+margin_bottom = 676.0
 text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CreditsDialog" type="AcceptDialog" parent="."]
+visible = true
 margin_right = 83.0
 margin_bottom = 58.0
+size_flags_horizontal = 13
+size_flags_vertical = 13
+theme = SubResource( 1 )
+window_title = "Credits"
 dialog_text = "Music:
+Amazon by Blake
+(c) copyright 2015
+Licensed under a Creative Commons Attribution Noncommercial  (3.0) license.
+http://dig.ccmixter.org/files/blakeht/50159 
 
-- Amazon by Blake (c) copyright 2015 Licensed under a Creative Commons Attribution Noncommercial  (3.0) license. http://dig.ccmixter.org/files/blakeht/50159 
-- 1985 by Ilya (c) copyright 2015 Licensed under a Creative Commons Noncommercial Sampling Plus license. http://dig.ccmixter.org/files/Ilya/50960 Ft: Blake"
+1985 by Ilya
+(c) copyright 2015
+Licensed under a Creative Commons Noncommercial Sampling Plus license.
+http://dig.ccmixter.org/files/Ilya/50960 Ft: Blake"
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
