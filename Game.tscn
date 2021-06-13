@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Spawner.gd" type="Script" id=1]
 [ext_resource path="res://Game.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://background.png" type="Texture" id=7]
 [ext_resource path="res://heart.png" type="Texture" id=8]
 [ext_resource path="res://hurt.wav" type="AudioStream" id=9]
+[ext_resource path="res://Ilya_-_1985.ogg" type="AudioStream" id=10]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 2 )
@@ -105,9 +106,14 @@ texture = ExtResource( 8 )
 [node name="Hurt" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
 
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_Timer_timeout"]
 [connection signal="add_score" from="SteveTop" to="." method="_on_SteveTop_add_score"]
 [connection signal="game_over" from="SteveTop" to="." method="_on_SteveTop_game_over"]
 [connection signal="add_score" from="SteveBot" to="." method="_on_SteveBot_add_score"]
 [connection signal="game_over" from="SteveBot" to="." method="_on_SteveBot_game_over"]
+[connection signal="finished" from="Music" to="." method="_on_Music_finished"]

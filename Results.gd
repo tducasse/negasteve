@@ -22,3 +22,7 @@ func _ready():
 func _on_Back_pressed():
 	var _c = get_tree().change_scene("res://Menu.tscn")
 
+
+
+func _on_TryAgain_pressed():
+	var _c = get_tree().change_scene("res://Game.tscn")

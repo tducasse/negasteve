@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/blakeht_-_Amazon.ogg-32542b8d7848e8d405f47615f7cb0863.oggstr"
+
+[deps]
+
+source_file="res://blakeht_-_Amazon.ogg"
+dest_files=[ "res://.import/blakeht_-_Amazon.ogg-32542b8d7848e8d405f47615f7cb0863.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

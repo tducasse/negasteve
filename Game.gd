@@ -15,7 +15,7 @@ onready var Heart2 = $Lives/heart2
 onready var Heart3 = $Lives/heart3
 onready var Hurt = $Hurt
 
-var top_enabled = true
+var top_enabled = false
 var score = 0
 var level = 1
 var level_time = 10
@@ -30,10 +30,10 @@ func _ready():
 	Spawner.pause_mode=PAUSE_MODE_STOP
 	Spawner.start_timer()
 	randomize()
-	SteveTop.init(Color.white, true)
-	SteveBot.init(Color.black, false)
-	FilterTop.color = Color(0,0,0,0)
-	FilterBot.color = Color(0,0,0,0.6)
+	SteveTop.init(Color.white, false)
+	SteveBot.init(Color.black, true)
+	FilterTop.color = Color(0,0,0,0.6)
+	FilterBot.color = Color(0,0,0,0)
 	update_global()
 	update_score()
 	update_level()

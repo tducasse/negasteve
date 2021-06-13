@@ -1,0 +1,36 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1623549840.json",
+	"mirror_portraits": false,
+	"name": "Negative Steve",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": -70,
+	"offset_y": -30,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		},
+		{
+			"name": "Thinking",
+			"path": "res://negasteve/steve006.png"
+		},
+		{
+			"name": "Scared",
+			"path": "res://negasteve/steve007.png"
+		},
+		{
+			"name": "Angry",
+			"path": "res://negasteve/steve005.png"
+		},
+		{
+			"name": "Happy",
+			"path": "res://negasteve/steve004.png"
+		}
+	],
+	"scale": 500
+}

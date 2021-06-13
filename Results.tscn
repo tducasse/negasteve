@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Mont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Results.gd" type="Script" id=2]
 [ext_resource path="res://background.png" type="Texture" id=3]
 [ext_resource path="res://Insanicbc.tres" type="DynamicFont" id=4]
+[ext_resource path="res://blakeht_-_Amazon.ogg" type="AudioStream" id=5]
 
 [node name="Results" type="Control"]
 anchor_left = 0.5
@@ -89,9 +90,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/CenterContainer"]
-margin_left = 226.0
-margin_right = 386.0
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/VBoxContainer/MarginContainer/CenterContainer"]
+margin_left = 98.0
+margin_right = 515.0
+margin_bottom = 80.0
+dragger_visibility = 1
+
+[node name="TryAgain" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/CenterContainer/HSplitContainer"]
+margin_right = 245.0
+margin_bottom = 80.0
+custom_fonts/font = ExtResource( 1 )
+text = "Try again"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/CenterContainer/HSplitContainer"]
+margin_left = 257.0
+margin_right = 417.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 160, 80 )
 size_flags_horizontal = 0
@@ -102,4 +115,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/CenterContainer/Back" to="." method="_on_Back_pressed"]
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/CenterContainer/HSplitContainer/TryAgain" to="." method="_on_TryAgain_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/CenterContainer/HSplitContainer/Back" to="." method="_on_Back_pressed"]

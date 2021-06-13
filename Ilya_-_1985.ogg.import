@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ilya_-_1985.ogg-076c8c35789c9a2c126558437a8330bf.oggstr"
+
+[deps]
+
+source_file="res://Ilya_-_1985.ogg"
+dest_files=[ "res://.import/Ilya_-_1985.ogg-076c8c35789c9a2c126558437a8330bf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

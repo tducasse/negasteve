@@ -1,0 +1,157 @@
+{
+	"events": [
+		{
+			"character": "character-1623549945.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "After all these years..."
+		},
+		{
+			"character": "character-1623549945.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I've finally found it..."
+		},
+		{
+			"character": "character-1623549945.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The gate to another dimension!"
+		},
+		{
+			"character": "character-1623549945.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "**goes through the gate**"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://gate.wav",
+			"volume": -10
+		},
+		{
+			"action": "join",
+			"character": "character-1623549823.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "Angry",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1623549823.json",
+			"event_id": "dialogic_001",
+			"portrait": "Angry",
+			"text": "Huh?! What happened to me?"
+		},
+		{
+			"character": "character-1623549840.json",
+			"event_id": "dialogic_001",
+			"portrait": "Angry",
+			"text": "It looks like our physical form has been altered..."
+		},
+		{
+			"character": "character-1623549823.json",
+			"event_id": "dialogic_001",
+			"portrait": "Scared",
+			"text": "Huh? Who's talking?"
+		},
+		{
+			"action": "join",
+			"character": "character-1623549840.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "Happy",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1623549840.json",
+			"event_id": "dialogic_001",
+			"portrait": "Happy",
+			"text": "Hey! I'm Steve! Who are you?"
+		},
+		{
+			"character": "character-1623549823.json",
+			"event_id": "dialogic_001",
+			"portrait": "Angry",
+			"text": "Wait, what? I'm Steve!"
+		},
+		{
+			"character": "character-1623549840.json",
+			"event_id": "dialogic_001",
+			"portrait": "Happy",
+			"text": "Well I guess that's part of the issue then!"
+		},
+		{
+			"character": "character-1623549823.json",
+			"event_id": "dialogic_001",
+			"portrait": "Angry",
+			"text": "Wait why are you stuck to my feet?"
+		},
+		{
+			"character": "character-1623549823.json",
+			"event_id": "dialogic_001",
+			"portrait": "Thinking",
+			"text": "Okay let me think..."
+		},
+		{
+			"character": "character-1623549823.json",
+			"event_id": "dialogic_001",
+			"portrait": "Thinking",
+			"text": "..."
+		},
+		{
+			"character": "character-1623549823.json",
+			"event_id": "dialogic_001",
+			"portrait": "Happy",
+			"text": "Got it! According to my calculations, we would have to run through the gate together at exactly 88mph to generate 1.21 gigawatts of power."
+		},
+		{
+			"character": "character-1623549840.json",
+			"event_id": "dialogic_001",
+			"portrait": "Thinking",
+			"text": "... Which gate? There are thousands!"
+		},
+		{
+			"character": "character-1623549823.json",
+			"event_id": "dialogic_001",
+			"portrait": "Scared",
+			"text": "Oh no! They must have been duplicated, just like us!"
+		},
+		{
+			"character": "character-1623549840.json",
+			"event_id": "dialogic_001",
+			"portrait": "Thinking",
+			"text": "It looks like I can go through the black gates, and you can go through the white gates."
+		},
+		{
+			"character": "character-1623549823.json",
+			"event_id": "dialogic_001",
+			"portrait": "Happy",
+			"text": " We could try running together, and switch the person that goes through the door with [color=red]SPACE[/color] or [color=red]UP[/color] or [color=red]DOWN[/color]?"
+		},
+		{
+			"change_scene": "res://Game.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2",
+		"file": "timeline-1623545430.json",
+		"name": "main"
+	}
+}

@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Mont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Menu.gd" type="Script" id=2]
 [ext_resource path="res://background.png" type="Texture" id=3]
 [ext_resource path="res://Insanicbc.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Ilya_-_1985.ogg" type="AudioStream" id=5]
+[ext_resource path="res://blakeht_-_Amazon.ogg" type="AudioStream" id=6]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -23,19 +25,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -335.0
-margin_top = -179.5
-margin_right = 335.0
-margin_bottom = 103.5
+margin_left = -435.5
+margin_top = -169.0
+margin_right = 435.5
+margin_bottom = 169.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Title" type="Label" parent="VBoxContainer"]
-margin_right = 670.0
+margin_right = 871.0
 margin_bottom = 134.0
 custom_fonts/font = ExtResource( 4 )
-text = "Nega-steve"
+text = "Negative steve"
 align = 1
 valign = 1
 __meta__ = {
@@ -44,18 +46,18 @@ __meta__ = {
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 margin_top = 138.0
-margin_right = 670.0
+margin_right = 871.0
 margin_bottom = 338.0
 custom_constants/margin_top = 120
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/MarginContainer"]
 margin_top = 120.0
-margin_right = 670.0
+margin_right = 871.0
 margin_bottom = 200.0
 
 [node name="Button" type="Button" parent="VBoxContainer/MarginContainer/CenterContainer"]
-margin_left = 245.0
-margin_right = 425.0
+margin_left = 345.0
+margin_right = 525.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 180, 80 )
 size_flags_horizontal = 0
@@ -66,4 +68,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Credits" type="Button" parent="."]
+margin_left = 1200.0
+margin_top = 680.0
+margin_right = 1257.0
+margin_bottom = 700.0
+text = "Credits"
+
+[node name="CreditsDialog" type="AcceptDialog" parent="."]
+margin_right = 83.0
+margin_bottom = 58.0
+dialog_text = "Music:
+
+- Amazon by Blake (c) copyright 2015 Licensed under a Creative Commons Attribution Noncommercial  (3.0) license. http://dig.ccmixter.org/files/blakeht/50159 
+- 1985 by Ilya (c) copyright 2015 Licensed under a Creative Commons Noncommercial Sampling Plus license. http://dig.ccmixter.org/files/Ilya/50960 Ft: Blake"
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="DialogMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+
 [connection signal="pressed" from="VBoxContainer/MarginContainer/CenterContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
