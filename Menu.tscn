@@ -81,7 +81,6 @@ __meta__ = {
 }
 
 [node name="CreditsDialog" type="AcceptDialog" parent="."]
-visible = true
 margin_right = 83.0
 margin_bottom = 58.0
 size_flags_horizontal = 13
