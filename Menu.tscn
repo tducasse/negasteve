@@ -89,7 +89,6 @@ autoplay = true
 
 [node name="DialogMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/MarginContainer/CenterContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
